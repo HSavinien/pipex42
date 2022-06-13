@@ -1,4 +1,5 @@
 SRCS	=	pipex.c \
+			read_args.c \
 
 OBJS	=	${SRCS:%.c=%.o}
 BOBJS	=	${BSRCS:%.c=%.o}
