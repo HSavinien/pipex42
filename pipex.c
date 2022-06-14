@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 14:44:59 by tmongell          #+#    #+#             */
-/*   Updated: 2022/06/13 15:58:46 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/06/14 18:16:53 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 
 int	main(int ac, char **av)
 {
-	int	fd_in;
-	int	fd_out;
-	read_args(ac, av, &fd_in, &fd_out);
-	
+	int	fds[2];
+	int	pid;
+
+	pid = fork();
+
+	read_args(ac, av, fds, fds + 1);
 }

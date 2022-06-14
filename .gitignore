@@ -1,0 +1,12 @@
+.DS_store
+*.o
+*.a
+*.swp
+*.swo
+*.dSYM
+pipex
+libft.a
+library/libft/libft.a
+library/printf/libftprintf.a
+test
+*.tar.gz
