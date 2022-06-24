@@ -1,5 +1,7 @@
 SRCS	=	pipex.c \
 			read_args.c \
+			sub_process.c \
+			utils.c \
 
 OBJS	=	${SRCS:%.c=%.o}
 BOBJS	=	${BSRCS:%.c=%.o}

@@ -4,9 +4,9 @@
 *.swp
 *.swo
 *.dSYM
+*.a
 pipex
-libft.a
-library/libft/libft.a
-library/printf/libftprintf.a
 test
 *.tar.gz
+infile
+outfile
