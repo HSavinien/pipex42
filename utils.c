@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:25:34 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/04 18:46:40 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:03:28 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	error(char *msg)
 {
-	dprintf(2, "debug error : %s\n", msg);//debug
-	ft_printf("Error :\n%s\n", msg);
+	write (2, "Error : \n", 9);
+	write (2, msg, ft_strlen(msg));
+	write (2, "\n", 1);
 	exit(1);
 }
 
-char	*get_true_fct(char	*base, char ***args)
+char	*extract_args(char	*base, char ***args)
 {
 	int		i;
 	char	*cmd;
