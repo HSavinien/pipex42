@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:43:51 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 18:47:41 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:03:40 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int ac, char **av, char **env)
 {
 	int	fd_in;
-	int fd_out;
+	int	fd_out;
 	int	pipe_fd[2];
 
 	read_args(ac, av, &fd_in, &fd_out);

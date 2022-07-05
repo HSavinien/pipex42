@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:54:02 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 18:48:20 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:06:10 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,5 @@ void	do_cmd(char	*fct, char **env)
 		error("comande not found");
 	}
 	else
-	{
 		waitpid(pid, &i, 0);
-	}
 }

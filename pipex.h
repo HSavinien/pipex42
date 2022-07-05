@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 14:44:17 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 15:49:28 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 19:05:10 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	read_args(int ac, char **av, int *fd_in, int *fd_out);
 
 //sub_process--------------------------------------------------------sub_process
 
-char**	get_path(char **env);
+char	**get_path(char **env);
 void	do_cmd(char	*fct, char **env);
 
 //utils--------------------------------------------------------------------utils
@@ -38,5 +38,3 @@ void	error(char *msg);
 char	*extract_args(char *base, char ***args);
 
 #endif
-
-#include <stdio.h>
