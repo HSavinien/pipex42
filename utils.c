@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:25:34 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 17:03:28 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/05 18:14:44 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,6 @@ char	*extract_args(char	*base, char ***args)
 	*args = ft_split_word(base);
 	cmd = *args[0];
 	i = 0;
-	while ((*args)[i])
-	{
-		(*args)[i] = (*args)[i + 1];
-		i ++;
-	}
-	if (!(*args)[0])
-		args = NULL;
+	args ++;
 	return (cmd);
 }
