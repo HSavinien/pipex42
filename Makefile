@@ -10,7 +10,7 @@ CC		=	gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-LIB		=	-L./library/ft_printf -lftprintf -L./library/libft -lft
+LIB		=	-L./lib/ft_printf -lftprintf -L./lib/libft -lft
 
 NAME	=	pipex
 
@@ -25,23 +25,23 @@ ${NAME}: ${OBJS}	library
 library:	printf libft
 
 printf:
-	@make -s -C ./library/ft_printf
+	@make -s -C ./lib/ft_printf
 	@echo "printf compiled"
 
 libft:
-	@make -s -C ./library/libft
+	@make -s -C ./lib/libft
 	@echo "libft compiled"
 
 clean:
 	@rm -rf ${OBJS} ${NAME}.dSYM ${BOBJS} test
-	@make -s -C ./library/ft_printf clean
-	@make -s -C ./library/libft clean
+	@make -s -C ./lib/ft_printf clean
+	@make -s -C ./lib/libft clean
 	@echo "object files removed"
 
 fclean:		clean
 	@rm -f ${NAME} generator bonus/checker
-	@make -s -C ./library/ft_printf fclean
-	@make -s -C ./library/libft fclean
+	@make -s -C ./lib/ft_printf fclean
+	@make -s -C ./lib/libft fclean
 	@echo "${NAME} file removed"
 
 re:		fclean all

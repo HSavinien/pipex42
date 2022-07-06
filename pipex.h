@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 14:44:17 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 19:05:10 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/06 14:48:56 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <fcntl.h>
 # include <sys/wait.h>
 # include <signal.h>
-# include "library/libft/libft.h"
-# include "library/ft_printf/libftprintf.h"
+# include "lib/libft/libft.h"
+# include "lib/ft_printf/libftprintf.h"
 
 # define STD_IN 0
 # define STD_OUT 1
