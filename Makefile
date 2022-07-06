@@ -18,7 +18,8 @@ NAME	=	pipex
 
 all:		${NAME}
 
-${NAME}: ${OBJS}	library
+${NAME}: ${OBJS}
+	make library
 	@${CC} ${CFLAGS} ${LIB} ${OBJS} -o ${NAME}
 	@echo "code compiled succesfully"
 
