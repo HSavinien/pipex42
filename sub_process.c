@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:54:02 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 19:06:10 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:38:51 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	**get_path(char **env)
 	int		i;
 
 	i = 0;
-	while (ft_strncmp(env[i], "PATH=", 5) && env[i])
+	while (env[i] && ft_strncmp(env[i], "PATH=", 5))
 		i ++;
-	if (!env)
-		error ("environment variable PATH can't be located");
+	if (!env[i])
+		error ("cmd not found (no PATH)");
 	path = ft_split(ft_strchr(env[i], '=') + 1, ':');
-	if (!path)
-		error("problem with env var PATH");
+	if (!*path)
+		error ("cmd not found (PATH empty)");
 	return (path);
 }
 
