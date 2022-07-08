@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:54:02 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/08 18:38:51 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/08 19:17:07 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	do_cmd(char	*fct, char **env)
 	if (!pid)
 	{
 		fct = extract_args(fct, &args);
+		execve(fct, args, env);
 		path = get_path(env);
 		i = 0;
-		execve(fct, args, env);
 		while (path[i])
 		{
 			cmd_path = ft_strjoin(path[i ++], "/");
