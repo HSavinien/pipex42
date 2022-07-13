@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 14:38:46 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/06 14:06:58 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/13 14:38:18 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	read_args(int ac, char **av, int *fd_in, int *fd_out)
 	*fd_in = open(av[1], O_RDONLY);
 	*fd_out = open(av[4], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (*fd_in < 0)
-		exit(ft_printf("error : cannot read file %s\n", av[1]));
+		ft_printf("error : cannot read file %s\n", av[1]);
 	if (*fd_out < 0)
-		exit(ft_printf("error : cannot write in file %s\n", av[4]));
+		ft_printf("error : cannot write in file %s\n", av[4]);
 }

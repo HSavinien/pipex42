@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 18:43:51 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/05 19:03:40 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/13 14:40:37 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ int	main(int ac, char **av, char **env)
 		error("could not create pipe");
 	dup2(fd_in, STD_IN);
 	dup2(pipe_fd[1], STD_OUT);
-	do_cmd(av[2], env);
+	if (fd_in > 0)
+		do_cmd(av[2], env);
 	close(fd_in);
 	close(pipe_fd[1]);
 	dup2(pipe_fd[0], STD_IN);
 	dup2(fd_out, STD_OUT);
-	do_cmd(av[3], env);
+	if (fd_out > 0)
+		do_cmd(av[3], env);
 	close(pipe_fd[0]);
 	close(fd_out);
 }
