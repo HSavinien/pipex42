@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:54:02 by tmongell          #+#    #+#             */
-/*   Updated: 2022/07/09 18:55:09 by tmongell         ###   ########.fr       */
+/*   Updated: 2022/07/13 15:05:33 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	try_path(char *cmd, char *path, char **args, char **env)
 {
 	char	*cmd_path;
-			
+
 	cmd_path = ft_strjoin(path, "/");
 	cmd_path = ft_strjoin(cmd_path, cmd);
 	execve(cmd_path, args, env);
